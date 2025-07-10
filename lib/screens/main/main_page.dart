@@ -7,14 +7,14 @@ import 'package:upcoming_movies/screens/more/more_page.dart';
 import 'package:upcoming_movies/utilities/app_icons.dart';
 import '../watch/upcoming_movies_list_page/upcoming_movies_list_page.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MainPageState extends State<MainPage> {
   final List<Widget> _screens = [
     DashboardPage(),
     const UpcomingMoviesListPage(),
@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final BaseProvider provider = Provider.of<BaseProvider>(context);
     return Scaffold(
       body: _screens[provider.currentIndex],
-      extendBody: true, // Allows content to appear behind the nav bar
+      extendBody: true,
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           color: Colors.white,

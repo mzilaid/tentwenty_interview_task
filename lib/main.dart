@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:upcoming_movies/providers/base_provider.dart';
 import 'providers/movies_provider.dart';
-import '/screens/home_page/home_page.dart';
+import 'screens/main/main_page.dart';
 import '/utilities/app_theme.dart';
 
 void main() {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Upcoming Movies',
         theme: AppThemes.light,
-        home: const HomeScreen(),
+        home: const MainPage(),
       ),
     );
   }
